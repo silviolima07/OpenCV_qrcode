@@ -48,10 +48,8 @@ def qr_code_dec(image):
         
     return decoded_data
 
-
-    
-    
-st.markdown("**Aviso** Somente arquivos de QR-code, formatos jpg, peg e png.")
+  
+st.markdown("##### Aviso: Somente arquivos de QR-code nos formatos: jpg, jpeg e png.")
 
 
 #uploading the imges
@@ -65,21 +63,19 @@ else:
     image = np.array(Image.open(demo_image))
 
 
-st.subheader('Image original')
+st.subheader('Imagem original')
 
 #display the image
 st.image(
-    image, caption=f"Imagem original", use_column_width=True
+    image, caption=f" QR-Code", use_column_width=True
 ) 
-
-
 
 st.subheader('Imagem Decodificada')
 
 #if st.button("Decodificar"):
 decoded_data = qr_code_dec(image)
 st.subheader('Click no link:')
-st.title(decoded_data)
+st.header(decoded_data)
 
 st.markdown('''
           ### Creditos: Pavan Kunchala\n
