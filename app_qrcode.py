@@ -40,7 +40,7 @@ def qr_code_dec(image):
         
         rectified_image = np.uint8(rectified_qr_code)
         
-        decoded_data = 'Click : '+ data
+        decoded_data = data
         
         rectified_image = cv2.putText(rectified_image,decoded_data,(50,350),fontFace=cv2.FONT_HERSHEY_COMPLEX, fontScale = 2,
             color = (250,225,100),thickness =  3, lineType=cv2.LINE_AA)
@@ -78,7 +78,8 @@ st.subheader('Imagem Decodificada')
 
 #if st.button("Decodificar"):
 decoded_data = qr_code_dec(image)
-st.markdown(decoded_data)
+st.subheader('Click no link:')
+st.title(decoded_data)
 
 
 
