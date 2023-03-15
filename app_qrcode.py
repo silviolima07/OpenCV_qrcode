@@ -81,6 +81,11 @@ decoded_data = qr_code_dec(image)
 st.subheader('Click no link:')
 st.title(decoded_data)
 
+st.markdown('''
+          ### Creditos: Pavan Kunchala\n
+          https://medium.com/analytics-vidhya/create-a-qr-code-decoder-web-application-using-opencv-and-streamlit-b0656146e2d1            
+            ''')
+
 
 
     
